@@ -67,12 +67,18 @@ xt::xarray<float> transpose(xt::xarray<float>& predictions) {
     return new_predictions;
 }
 ```
-
-<table>
+## Performace metrics in C++ after Improvement 1 (best record so far)(time: millisecond)
+<table align="center">
   <tr>
     <td colspan=6 align="center"><strong>0.99</strong></td>
+    <td colspan=6 align="center"><strong>0.6</strong></td>
+    <td colspan=6 align="center"><strong>0.1</strong></td>
   </tr>
   <tr>
+    <td colspan=3>Reshape</td> 
+    <td colspan=3>Total runtime</td>
+    <td colspan=3>Reshape</td> 
+    <td colspan=3>Total runtime</td>
     <td colspan=3>Reshape</td> 
     <td colspan=3>Total runtime</td>
   </tr>
@@ -80,51 +86,25 @@ xt::xarray<float> transpose(xt::xarray<float>& predictions) {
     <td colspan=2>Before</td>
     <td colspan=2>4.423</td>
     <td colspan=2>8.128</td>
-  </tr>
-  <tr>
-    <td colspan=2>After</td>
-    <td colspan=2>$${\color{green}3.894}$$</td>
-    <td colspan=2>$${\color{green}7.633}$$</td>
-  </tr>
-    <tr>
-    <td colspan=6 align="center"><strong>0.6</strong></td>
-  </tr>
-  <tr>
-    <td colspan=3>Reshape</td> 
-    <td colspan=3>Total runtime</td>
-  </tr>
-  <tr>
     <td colspan=2>Before</td>
     <td colspan=2>4.453</td>
     <td colspan=2>12.731</td>
-  </tr>
-  <tr>
-    <td colspan=2>After</td>
-    <td colspan=2>$${\color{green}3.861}$$</td>
-    <td colspan=2>$${\color{green}12.078}$$</td>
-  </tr>
-  <tr>
-    <td colspan=6 align="center"><strong>0.1</strong></td>
-  </tr>
-   <tr>
-    <td colspan=3>Reshape</td> 
-    <td colspan=3>Total runtime</td>
-  </tr>
-  <tr>
     <td colspan=2>Before</td>
     <td colspan=2>4.579</td>
     <td colspan=2>25.848</td>
   </tr>
   <tr>
     <td colspan=2>After</td>
+    <td colspan=2>$${\color{green}3.894}$$</td>
+    <td colspan=2>$${\color{green}7.633}$$</td>
+     <td colspan=2>After</td>
+    <td colspan=2>$${\color{green}3.861}$$</td>
+    <td colspan=2>$${\color{green}12.078}$$</td>
+    <td colspan=2>After</td>
     <td colspan=2>$${\color{green}3.860}$$</td>
     <td colspan=2>$${\color{green}24.575}$$</td>
   </tr>
 </table>
-
-## Reference
-https://superfastpython.com/what-is-blas-and-lapack-in-numpy/
-
 
 ## How to run it?
 ### Step 1.
@@ -162,3 +142,7 @@ execute <i>post-process.cpp</i>
 ### Step 4.
 When the code successfully run, the result will be:
 <img src="https://github.com/userfromgithub/yolo-v4-postprocess/blob/main/drawing-results/Screenshot%20from%202023-08-31%2016-12-07.png" alt="thre99 image">
+
+## Reference
+https://superfastpython.com/what-is-blas-and-lapack-in-numpy/ <br>
+https://max-c.notion.site/C-Numpy-Python-NPY-efe8a325aacb43ec9827f86185220fdc
