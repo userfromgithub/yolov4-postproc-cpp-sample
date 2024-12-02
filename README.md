@@ -140,7 +140,7 @@ execute <i>post-process.cpp</i>
 ```
 
 ### Step 4.
-When the code successfully run, the result will be:
+When the code successfully run, the result will be (shown in microsecond. Please multiply by 0.001 to convert it to milliseconds.):
 <img src="./drawing-results/Screenshot%20from%202023-08-31%2016-12-07.png" alt="thre99 image">
 
 ## Reference
